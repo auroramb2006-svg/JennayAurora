@@ -36,6 +36,11 @@ btn.addEventListener('click', cambiarTexto);
 
 
 btn.addEventListener('click', (e) => {
-e.preventDefault
+e.preventDefault();
+numero = numero + 1;
+captura[1].textContent = numero;
+captura[1].classList.toggle('color');
 
 });
+
+console.log(btn);
