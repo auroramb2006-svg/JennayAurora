@@ -12,4 +12,4 @@ Estos son los comandos utilizados para trabajar en la rama `jenna`:
    Guarda los cambios preparados en un commit con el mensaje `primeros cambios`.
 
 4. `git push -u origin jenna`
-   Publica la rama `jenna` en el remoto `origin` y configura esa rama remota como seguimiento para futuros `push` y `pull`.
+   Publica la rama `jenna` en el remoto `origin`. La opción `-u` es abreviatura de `--set-upstream` y vincula la rama local con `origin/jenna`; así, en los siguientes envíos y actualizaciones, basta con ejecutar `git push` o `git pull` sin indicar el remoto ni la rama.
