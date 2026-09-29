@@ -1,211 +1,103 @@
 * {
-  border: 0;
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
 }
 
-:root {
-  --color-principal: rgb(16, 157, 223);
 
-  --color-secundario: rgb(114, 193, 230);
-
-  --color-fondo: rgb(240, 240, 240);
-
-  --fuente-primaria: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
-  --acento: rgb(209, 164, 38);
+.hero.activo {
+    height: 50rem;
+    overflow: visible;
 }
 
-body {
-  background-color: var(--color-fondo);
-  font-family: var(--fuente-primaria);
-  height: 100%;
-}
-
-h1,
-h2,
-h3,
-li,
-p {
-  color: var(--color-fondo);
-  
-}
-
-h2 {
-  font-weight: 100;
-}
-header {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  align-content: center;
-  align-items: center;
-  height: 100px;
-  background-color: var(--color-principal);
-}
-
-nav ul {
-  display: flex;
-  gap: 1rem;
-  list-style: none;
-}
-
-nav ul li a {
-  color: var(--color-fondo);
-  text-decoration: none;
-}
-.logo img {
-  height: 5rem;
-}
-
-.acento {
-  background-color: var(--acento);
-  padding: 4px;
-  border-radius: 7px;
-  margin-bottom: 10px;
-}
-
-footer {
-  background-color: var(--color-principal);
-  height: 20rem;
-  display: flex;
-  justify-content: center;
-}
-
-.baraja-footer {
-  display: flex;
-  height: auto;
-  gap: 10rem;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-}
-
-.logo-footer img {
-  height: 5rem;
-}
-
-.redes {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-.redes ul {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  margin-left: 5rem;
-  text-decoration: none;
-  list-style: none;
-}
-
-.enlaces {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-
-.enlaces ul {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  text-decoration: none;
-  list-style: none;
-}
-
-.contacto ul {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  text-decoration: none;
-  list-style: none;
-}
-
-.contacto {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-#boton-menu {
-  display: none;
-}
-@media (max-width: 425px) {
-  #boton-menu {
-    display: block;
-  }
-
-  .info-section-1 {
-    padding: 20px;
-  }
-  #menu.mostrar {
-    display: contents;
-    transition: all  0.5s;
-  }
-
-  #menu {
-    display: none;
+.hero {
+    height: 0;
     overflow: hidden;
-  }
-  nav ul {
-    flex-direction: column;
-    background-color: var(--color-secundario);
-    height: 10rem;
-    width: 20rem;
-    position: absolute;
-    right: 0px;
-    top: 6.5rem;
-  }
+}
 
-  .redes ul{
-    margin: 0;
-    padding: 0%;
-  }
-  .baraja-footer {
-    flex-direction: column;
-    gap: 5rem;
-    width: 30px;
-  }
-
-  footer {
-    align-items: center;
-    margin: 0;
-    padding: 0 auto;
-    height: 60rem;
-    text-align: center;
-  }
-
-  .enlaces{
-    margin-right:20px ;
-  }
-  footer {
-    font-size: 20px;
+.baraja {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
-    height: 790px;
-    text-align: center;
+    margin: 2rem;
+}
+
+figure img {
+    height: auto;
+    width: 100%;
+}
+
+.section-1 {
     display: flex;
     flex-direction: column;
-  }
+    justify-content: center;
+    align-items: center;
 }
+
+article {
+    background-color: var(--color-secundario);
+    max-width: 350px;
+    height: 600px;
+    box-shadow: 0px 15px 25px rgb(192, 192, 192);
+    border-radius: 20px;
+    
+}
+article:hover{
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  opacity: 0.8;
+}
+
+.info {
+    margin: 0 20px;
+}
+
+.info button {
+    border-radius: 7px;
+    padding: 10px;
+    margin: 30px 0;
+    background-color: var(--color-fondo);
+}
+
+.info-section-1 h2 {
+    color: var(--color-fondo);
+    font-weight: 700;
+padding: 10px 0;
+    font-size: 50px;
+    background-color: var(--color-secundario);
+    border-radius: 20px;
+}
+
+.info-section-1 p {
+    color: var(--color-principal);
+}
+
+.info-section-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+
+    margin: 50px 0;
+}
+
+@media (max-width: 425px) {
+    .baraja {
+        grid-template-columns: 1fr;
+        padding: 5%;
+        gap: 90px;
+    }
+
+    
+}
+
+/* Pantallas medianas (de 426px a 800px) */
 @media (min-width: 426px) and (max-width: 800px) {
-  footer {
-    height: fit-content;
-  }
-
-  body {
-    width: 100%;
-  }
-
-  .logo img {
-    height: 70px;
-
-
-  }
-
-  .baraja-footer{
-    gap: 60px;
-  }
+    .baraja {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 5%;
+    }
 
    
    
@@ -213,3 +105,4 @@ footer {
 
  
 }
+
