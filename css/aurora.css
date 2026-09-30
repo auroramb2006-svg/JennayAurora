@@ -82,6 +82,24 @@ padding: 10px 0;
     margin: 50px 0;
 }
 
+.colorin{
+    background-color: var(--color-principal);
+}
+
+.colorin-2{
+    background-color: antiquewhite;
+
+}
+
+.colorin-3{
+
+    background-color: aquamarine;
+}
+.colorin-4{
+
+    background-color:blueviolet;
+}
+
 @media (max-width: 425px) {
     .baraja {
         grid-template-columns: 1fr;

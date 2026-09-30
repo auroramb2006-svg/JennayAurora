@@ -34,12 +34,46 @@ let cambiarTexto = () => captura[1].textContent="nnnnncnnnfdnfndnfnsndf";
 
 btn.addEventListener('click', cambiarTexto);
 
+const tarjeta = document.querySelector('.tarjeta');
+
+
 
 btn.addEventListener('click', (e) => {
 e.preventDefault();
-numero = numero + 1;
-captura[1].textContent = numero;
-captura[1].classList.toggle('color');
+tarjeta.classList.toggle("colorin");
+
+});
+let btn2 = document.getElementById("btn-2");
+
+const tarjeta2 = document.querySelector('.tarjeta-2');
+
+
+
+btn2.addEventListener('click', (e) => {
+e.preventDefault();
+tarjeta2.classList.toggle("colorin-2");
+
+});
+let btn3 = document.getElementById("btn-3");
+
+const tarjeta3 = document.querySelector('.tarjeta-3');
+
+
+
+btn3.addEventListener('click', (e) => {
+e.preventDefault();
+tarjeta3.classList.toggle("colorin-3");
+
+});
+let btn4 = document.getElementById("btn-4");
+
+const tarjeta4 = document.querySelector('.tarjeta-4');
+
+
+
+btn4.addEventListener('click', (e) => {
+e.preventDefault();
+tarjeta4.classList.toggle("colorin-4");
 
 });
 
